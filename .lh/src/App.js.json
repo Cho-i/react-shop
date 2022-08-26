@@ -1,0 +1,538 @@
+{
+    "sourceFile": "src/App.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 130,
+            "patches": [
+                {
+                    "date": 1659677810962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1659678197709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,24 +2,18 @@\n import './App.css';\n \n function App() {\n   return (\n-    <div className=\"App\">\n-      <header className=\"App-header\">\n-        <img src={logo} className=\"App-logo\" alt=\"logo\" />\n-        <p>\n-          Edit <code>src/App.js</code> and save to reload.\n-        </p>\n-        <a\n-          className=\"App-link\"\n-          href=\"https://reactjs.org\"\n-          target=\"_blank\"\n-          rel=\"noopener noreferrer\"\n-        >\n-          Learn React\n-        </a>\n-      </header>\n-    </div>\n+    <Navbar bg=\"dark\" variant=\"dark\">\n+      <Container>\n+        <Navbar.Brand href=\"#home\">Navbar</Navbar.Brand>\n+        <Nav className=\"me-auto\">\n+          <Nav.Link href=\"#home\">Home</Nav.Link>\n+          <Nav.Link href=\"#features\">Features</Nav.Link>\n+          <Nav.Link href=\"#pricing\">Pricing</Nav.Link>\n+        </Nav>\n+      </Container>\n+    </Navbar>\n   );\n }\n \n export default App;\n"
+                },
+                {
+                    "date": 1659678333262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,9 @@\n import logo from './logo.svg';\n import './App.css';\n+import Container from 'react-bootstrap/Container';\n+import Nav from 'react-bootstrap/Nav';\n+import Navbar from 'react-bootstrap/Navbar';\n \n function App() {\n   return (\n     <Navbar bg=\"dark\" variant=\"dark\">\n"
+                },
+                {
+                    "date": 1659678899779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n function App() {\n   return (\n     <Navbar bg=\"dark\" variant=\"dark\">\n       <Container>\n-        <Navbar.Brand href=\"#home\">Navbar</Navbar.Brand>\n+        <Navbar.Brand href=\"#home\">Shop</Navbar.Brand>\n         <Nav className=\"me-auto\">\n           <Nav.Link href=\"#home\">Home</Nav.Link>\n           <Nav.Link href=\"#features\">Features</Nav.Link>\n           <Nav.Link href=\"#pricing\">Pricing</Nav.Link>\n"
+                },
+                {
+                    "date": 1659678949856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import logo from './logo.svg';\n import './App.css';\n-import Container from 'react-bootstrap/Container';\n-import Nav from 'react-bootstrap/Nav';\n-import Navbar from 'react-bootstrap/Navbar';\n+// import Container from 'react-bootstrap/Container';\n+// import Nav from 'react-bootstrap/Nav';\n+// import Navbar from 'react-bootstrap/Navbar';\n+import {Navbar, Nav, Container} from 'react-bootstrap';\n \n function App() {\n   return (\n     <Navbar bg=\"dark\" variant=\"dark\">\n"
+                },
+                {
+                    "date": 1659678960842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,6 @@\n import logo from './logo.svg';\n import './App.css';\n-// import Container from 'react-bootstrap/Container';\n-// import Nav from 'react-bootstrap/Nav';\n-// import Navbar from 'react-bootstrap/Navbar';\n import {Navbar, Nav, Container} from 'react-bootstrap';\n \n function App() {\n   return (\n"
+                },
+                {
+                    "date": 1659679479232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import logo from './logo.svg';\n+//import logo from './logo.svg';\n import './App.css';\n import {Navbar, Nav, Container} from 'react-bootstrap';\n \n function App() {\n"
+                },
+                {
+                    "date": 1659680258439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,18 +3,23 @@\n import {Navbar, Nav, Container} from 'react-bootstrap';\n \n function App() {\n   return (\n-    <Navbar bg=\"dark\" variant=\"dark\">\n-      <Container>\n-        <Navbar.Brand href=\"#home\">Shop</Navbar.Brand>\n-        <Nav className=\"me-auto\">\n-          <Nav.Link href=\"#home\">Home</Nav.Link>\n-          <Nav.Link href=\"#features\">Features</Nav.Link>\n-          <Nav.Link href=\"#pricing\">Pricing</Nav.Link>\n-        </Nav>\n-      </Container>\n-    </Navbar>\n+    <div className=\"App\">\n+      <Navbar bg=\"dark\" variant=\"dark\">\n+        <Container>\n+          <Navbar.Brand href=\"#home\">Shop</Navbar.Brand>\n+          <Nav className=\"me-auto\">\n+            <Nav.Link href=\"#home\">Home</Nav.Link>\n+            <Nav.Link href=\"#features\">Features</Nav.Link>\n+            <Nav.Link href=\"#pricing\">Pricing</Nav.Link>\n+          </Nav>\n+        </Container>\n+      </Navbar>\n+      <div className=\"main-bg\">\n+      </div>    \n+    </div>\n+\n   );\n }\n \n export default App;\n"
+                },
+                {
+                    "date": 1659680268235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,9 @@\n             <Nav.Link href=\"#pricing\">Pricing</Nav.Link>\n           </Nav>\n         </Container>\n       </Navbar>\n-      <div className=\"main-bg\">\n-      </div>    \n+      <div className=\"main-bg\"></div>    \n     </div>\n \n   );\n }\n"
+                },
+                {
+                    "date": 1659680512260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n //import logo from './logo.svg';\n import './App.css';\n-import {Navbar, Nav, Container} from 'react-bootstrap';\n+import {Navbar, Nav, Container, Row, Col} from 'react-bootstrap';\n \n function App() {\n   return (\n     <div className=\"App\">\n@@ -15,8 +15,15 @@\n           </Nav>\n         </Container>\n       </Navbar>\n       <div className=\"main-bg\"></div>    \n+      <Container>\n+        <Row>\n+          <Col>1 of 3</Col>\n+          <Col>2 of 3</Col>\n+          <Col>3 of 3</Col>\n+        </Row>\n+      </Container>\n     </div>\n \n   );\n }\n"
+                },
+                {
+                    "date": 1659680643235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,13 @@\n       </Navbar>\n       <div className=\"main-bg\"></div>    \n       <Container>\n         <Row>\n-          <Col>1 of 3</Col>\n+          <Col>\n+            <img src=\"https://images.pexels.com/photos/9320207/pexels-photo-9320207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n+            <h4>제목</h4>\n+            <p>내용</p>\n+          </Col>\n           <Col>2 of 3</Col>\n           <Col>3 of 3</Col>\n         </Row>\n       </Container>\n"
+                },
+                {
+                    "date": 1659680650154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,10 +22,18 @@\n             <img src=\"https://images.pexels.com/photos/9320207/pexels-photo-9320207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n             <h4>제목</h4>\n             <p>내용</p>\n           </Col>\n-          <Col>2 of 3</Col>\n-          <Col>3 of 3</Col>\n+          <Col>\n+            <img src=\"https://images.pexels.com/photos/9320207/pexels-photo-9320207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n+            <h4>제목</h4>\n+            <p>내용</p>\n+          </Col>\n+          <Col>\n+            <img src=\"https://images.pexels.com/photos/9320207/pexels-photo-9320207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n+            <h4>제목</h4>\n+            <p>내용</p>\n+          </Col>\n         </Row>\n       </Container>\n     </div>\n \n"
+                },
+                {
+                    "date": 1659680734175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,19 +18,19 @@\n       <div className=\"main-bg\"></div>    \n       <Container>\n         <Row>\n           <Col>\n-            <img src=\"https://images.pexels.com/photos/9320207/pexels-photo-9320207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n+            <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n             <h4>제목</h4>\n             <p>내용</p>\n           </Col>\n           <Col>\n-            <img src=\"https://images.pexels.com/photos/9320207/pexels-photo-9320207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n+            <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n             <h4>제목</h4>\n             <p>내용</p>\n           </Col>\n           <Col>\n-            <img src=\"https://images.pexels.com/photos/9320207/pexels-photo-9320207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n+            <img src=\"https://images.pexels.com/photos/9320207/pexels-photo-9320207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n             <h4>제목</h4>\n             <p>내용</p>\n           </Col>\n         </Row>\n"
+                },
+                {
+                    "date": 1659680741554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,14 +23,14 @@\n             <h4>제목</h4>\n             <p>내용</p>\n           </Col>\n           <Col>\n-            <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n+            <img src=\"https://images.pexels.com/photos/9320207/pexels-photo-9320207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n             <h4>제목</h4>\n             <p>내용</p>\n           </Col>\n           <Col>\n-            <img src=\"https://images.pexels.com/photos/9320207/pexels-photo-9320207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n+            <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n             <h4>제목</h4>\n             <p>내용</p>\n           </Col>\n         </Row>\n"
+                },
+                {
+                    "date": 1659680747111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             <h4>제목</h4>\n             <p>내용</p>\n           </Col>\n           <Col>\n-            <img src=\"https://images.pexels.com/photos/9320207/pexels-photo-9320207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n+            <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n             <h4>제목</h4>\n             <p>내용</p>\n           </Col>\n           <Col>\n"
+                },
+                {
+                    "date": 1659682587928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n //import logo from './logo.svg';\n import './App.css';\n import {Navbar, Nav, Container, Row, Col} from 'react-bootstrap';\n+import data from './data';\n \n function App() {\n   return (\n     <div className=\"App\">\n"
+                },
+                {
+                    "date": 1659682605208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       <Container>\n         <Row>\n           <Col>\n             <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-            <h4>제목</h4>\n+            <h4>{data[0].title}</h4>\n             <p>내용</p>\n           </Col>\n           <Col>\n             <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n"
+                },
+                {
+                    "date": 1659682655711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         <Row>\n           <Col>\n             <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n             <h4>{data[0].title}</h4>\n-            <p>내용</p>\n+            <p>{data[0].price}</p>\n           </Col>\n           <Col>\n             <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n             <h4>제목</h4>\n"
+                },
+                {
+                    "date": 1659682831266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,18 @@\n           </Col>\n         </Row>\n       </Container>\n     </div>\n+  );\n+}\n \n+function list(){\n+  return (\n+    <Col>\n+      <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n+      <h4>{data[0].title}</h4>\n+      <p>{data[0].price}</p>\n+    </Col>\n   );\n }\n \n export default App;\n"
+                },
+                {
+                    "date": 1659682846356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n     </div>\n   );\n }\n \n-function list(){\n+function List(){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n       <h4>{data[0].title}</h4>\n"
+                },
+                {
+                    "date": 1659682885119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n       </Navbar>\n       <div className=\"main-bg\"></div>    \n       <Container>\n         <Row>\n-          <Col>\n+          {/* <Col>\n             <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n             <h4>{data[0].title}</h4>\n             <p>{data[0].price}</p>\n           </Col>\n@@ -32,9 +32,12 @@\n           <Col>\n             <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n             <h4>제목</h4>\n             <p>내용</p>\n-          </Col>\n+          </Col> */}\n+          <List />\n+          <List />\n+          <List />\n         </Row>\n       </Container>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1659683025653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,8 +33,15 @@\n             <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n             <h4>제목</h4>\n             <p>내용</p>\n           </Col> */}\n+          {\n+            data.map(function(a,i){\n+              return(\n+                \n+              )\n+            })\n+          }\n           <List />\n           <List />\n           <List />\n         </Row>\n"
+                },
+                {
+                    "date": 1659683040249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,15 +36,12 @@\n           </Col> */}\n           {\n             data.map(function(a,i){\n               return(\n-                \n+                <List />\n               )\n             })\n           }\n-          <List />\n-          <List />\n-          <List />\n         </Row>\n       </Container>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1659683088011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n           </Col> */}\n           {\n             data.map(function(a,i){\n               return(\n-                <List />\n+                <List data={data} />\n               )\n             })\n           }\n         </Row>\n"
+                },
+                {
+                    "date": 1659683122811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n     </div>\n   );\n }\n \n-function List(){\n+function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n       <h4>{data[0].title}</h4>\n"
+                },
+                {
+                    "date": 1659683223590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n //import logo from './logo.svg';\n import './App.css';\n+import { useState } from 'react';\n import {Navbar, Nav, Container, Row, Col} from 'react-bootstrap';\n import data from './data';\n \n function App() {\n+  let [count, setCount] = useState(0);\n   return (\n     <div className=\"App\">\n       <Navbar bg=\"dark\" variant=\"dark\">\n         <Container>\n@@ -18,23 +20,8 @@\n       </Navbar>\n       <div className=\"main-bg\"></div>    \n       <Container>\n         <Row>\n-          {/* <Col>\n-            <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-            <h4>{data[0].title}</h4>\n-            <p>{data[0].price}</p>\n-          </Col>\n-          <Col>\n-            <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-            <h4>제목</h4>\n-            <p>내용</p>\n-          </Col>\n-          <Col>\n-            <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-            <h4>제목</h4>\n-            <p>내용</p>\n-          </Col> */}\n           {\n             data.map(function(a,i){\n               return(\n                 <List data={data} />\n"
+                },
+                {
+                    "date": 1659683300817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         <Row>\n           {\n             data.map(function(a,i){\n               return(\n-                <List data={data} />\n+                <List data={data} count={count} />\n               )\n             })\n           }\n         </Row>\n"
+                },
+                {
+                    "date": 1659683349425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import {Navbar, Nav, Container, Row, Col} from 'react-bootstrap';\n import data from './data';\n \n function App() {\n-  let [count, setCount] = useState(0);\n+  let [idx, setIdx] = useState(0);\n   return (\n     <div className=\"App\">\n       <Navbar bg=\"dark\" variant=\"dark\">\n         <Container>\n@@ -23,9 +23,9 @@\n         <Row>\n           {\n             data.map(function(a,i){\n               return(\n-                <List data={data} count={count} />\n+                <List data={data} idx={idx} />\n               )\n             })\n           }\n         </Row>\n"
+                },
+                {
+                    "date": 1659683554929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,9 @@\n       <Container>\n         <Row>\n           {\n             data.map(function(a,i){\n+              setIdx(i)\n               return(\n                 <List data={data} idx={idx} />\n               )\n             })\n"
+                },
+                {
+                    "date": 1659683588556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,10 +38,10 @@\n function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      <h4>{data[0].title}</h4>\n-      <p>{data[0].price}</p>\n+      <h4>{data[props.idx].title}</h4>\n+      <p>{data[props.idx].price}</p>\n     </Col>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1659683618809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n       <Container>\n         <Row>\n           {\n             data.map(function(a,i){\n-              setIdx(i)\n+              //setIdx(i)\n               return(\n                 <List data={data} idx={idx} />\n               )\n             })\n"
+                },
+                {
+                    "date": 1659683643476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n           {\n             data.map(function(a,i){\n               //setIdx(i)\n               return(\n-                <List data={data} idx={idx} />\n+                <List data={data} idx={idx}  key={i} />\n               )\n             })\n           }\n         </Row>\n"
+                },
+                {
+                    "date": 1659683697468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n           {\n             data.map(function(a,i){\n               //setIdx(i)\n               return(\n-                <List data={data} idx={idx}  key={i} />\n+                <List data={data} idx={idx} key={i} />\n               )\n             })\n           }\n         </Row>\n"
+                },
+                {
+                    "date": 1659683743864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,10 @@\n           {\n             data.map(function(a,i){\n               //setIdx(i)\n               return(\n-                <List data={data} idx={idx} key={i} />\n+                <List data={data} idx={idx} key={i} setIdx={i} />\n+                \n               )\n             })\n           }\n         </Row>\n"
+                },
+                {
+                    "date": 1659683942552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n           {\n             data.map(function(a,i){\n               //setIdx(i)\n               return(\n-                <List data={data} idx={idx} key={i} setIdx={i} />\n+                <List data={data} idx={idx} key={i}/>\n                 \n               )\n             })\n           }\n"
+                },
+                {
+                    "date": 1659683975353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n       <Container>\n         <Row>\n           {\n             data.map(function(a,i){\n-              //setIdx(i)\n+              setIdx(i)\n               return(\n                 <List data={data} idx={idx} key={i}/>\n                 \n               )\n"
+                },
+                {
+                    "date": 1659684016468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,11 +22,11 @@\n       <Container>\n         <Row>\n           {\n             data.map(function(a,i){\n-              setIdx(i)\n+              //setIdx(i)\n               return(\n-                <List data={data} idx={idx} key={i}/>\n+                <List data={data} idx={setIdx(i)} key={i}/>\n                 \n               )\n             })\n           }\n"
+                },
+                {
+                    "date": 1659684052088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      <h4>{data[props.idx].title}</h4>\n+      <h4>{data[i].title}</h4>\n       <p>{data[props.idx].price}</p>\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659684064474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      <h4>{data[i].title}</h4>\n+      <h4>{data[props.i].title}</h4>\n       <p>{data[props.idx].price}</p>\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659684072106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n       <h4>{data[props.i].title}</h4>\n-      <p>{data[props.idx].price}</p>\n+      {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1659684132363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import {Navbar, Nav, Container, Row, Col} from 'react-bootstrap';\n import data from './data';\n \n function App() {\n-  let [idx, setIdx] = useState(0);\n+  //let [idx, setIdx] = useState(0);\n   return (\n     <div className=\"App\">\n       <Navbar bg=\"dark\" variant=\"dark\">\n         <Container>\n@@ -22,11 +22,11 @@\n       <Container>\n         <Row>\n           {\n             data.map(function(a,i){\n-              //setIdx(i)\n+              let [idx, setIdx] = useState(0);\n               return(\n-                <List data={data} idx={setIdx(i)} key={i}/>\n+                <List data={data} idx={idx} key={i}/>\n                 \n               )\n             })\n           }\n"
+                },
+                {
+                    "date": 1659684139616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      <h4>{data[props.i].title}</h4>\n+      <h4>{data[props.idx].title}</h4>\n       {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659684161082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import {Navbar, Nav, Container, Row, Col} from 'react-bootstrap';\n import data from './data';\n \n function App() {\n-  //let [idx, setIdx] = useState(0);\n+  let [idx, setIdx] = useState(0);\n   return (\n     <div className=\"App\">\n       <Navbar bg=\"dark\" variant=\"dark\">\n         <Container>\n@@ -22,9 +22,8 @@\n       <Container>\n         <Row>\n           {\n             data.map(function(a,i){\n-              let [idx, setIdx] = useState(0);\n               return(\n                 <List data={data} idx={idx} key={i}/>\n                 \n               )\n"
+                },
+                {
+                    "date": 1659684304429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,13 @@\n         <Row>\n           {\n             data.map(function(a,i){\n               return(\n+                // function listIdx(){\n+                //   setIdx(i)\n+                // }\n+                console.log(i);\n                 <List data={data} idx={idx} key={i}/>\n-                \n               )\n             })\n           }\n         </Row>\n"
+                },
+                {
+                    "date": 1659684338101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,10 +26,10 @@\n               return(\n                 // function listIdx(){\n                 //   setIdx(i)\n                 // }\n-                console.log(i);\n-                <List data={data} idx={idx} key={i}/>\n+                //console.log(i);\n+                <List data={data} idx={setIdx(i)} key={i}/>\n               )\n             })\n           }\n         </Row>\n"
+                },
+                {
+                    "date": 1659684352363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n                 // function listIdx(){\n                 //   setIdx(i)\n                 // }\n                 //console.log(i);\n-                <List data={data} idx={setIdx(i)} key={i}/>\n+                <List data={data} setIdx={idx(i)} key={i}/>\n               )\n             })\n           }\n         </Row>\n"
+                },
+                {
+                    "date": 1659684369117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n                 // function listIdx(){\n                 //   setIdx(i)\n                 // }\n                 //console.log(i);\n-                <List data={data} setIdx={idx(i)} key={i}/>\n+                <List data={data} idx={idx} key={i}/>\n               )\n             })\n           }\n         </Row>\n"
+                },
+                {
+                    "date": 1659684527118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,13 @@\n                 // function listIdx(){\n                 //   setIdx(i)\n                 // }\n                 //console.log(i);\n-                <List data={data} idx={idx} key={i}/>\n+                <div>\n+                 <p>{a}</p>\n+                <List data={data} idx={idx} key={i}/>               \n+                </div>\n+\n               )\n             })\n           }\n         </Row>\n"
+                },
+                {
+                    "date": 1659684546662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      <h4>{data[props.idx].title}</h4>\n+      {/* <h4>{data[props.idx].title}</h4> */}\n       {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659684559308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n                 // }\n                 //console.log(i);\n                 <div>\n                  <p>{a}</p>\n-                <List data={data} idx={idx} key={i}/>               \n+                <List data={data} idx={idx}/>               \n                 </div>\n \n               )\n             })\n"
+                },
+                {
+                    "date": 1659684575363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n                 // }\n                 //console.log(i);\n                 <div>\n                  <p>{a}</p>\n-                <List data={data} idx={idx}/>               \n+                {/* <List data={data} idx={idx}/>                */}\n                 </div>\n \n               )\n             })\n"
+                },
+                {
+                    "date": 1659684594010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n                 //   setIdx(i)\n                 // }\n                 //console.log(i);\n                 <div>\n-                 <p>{a}</p>\n+                 {/* <p>{a}</p> */}\n                 {/* <List data={data} idx={idx}/>                */}\n                 </div>\n \n               )\n"
+                },
+                {
+                    "date": 1659684650061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,9 @@\n                 //console.log(i);\n                 <div>\n                  {/* <p>{a}</p> */}\n                 {/* <List data={data} idx={idx}/>                */}\n+                <p>{i}</p>\n                 </div>\n \n               )\n             })\n"
+                },
+                {
+                    "date": 1659684789909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,9 @@\n                 <div>\n                  {/* <p>{a}</p> */}\n                 {/* <List data={data} idx={idx}/>                */}\n                 <p>{i}</p>\n+                <List data={data} idx={idx}/> \n                 </div>\n \n               )\n             })\n"
+                },
+                {
+                    "date": 1659684822871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      {/* <h4>{data[props.idx].title}</h4> */}\n+      <h4>{data[props.idx].title}</h4>\n       {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659684884784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 <div>\n                  {/* <p>{a}</p> */}\n                 {/* <List data={data} idx={idx}/>                */}\n                 <p>{i}</p>\n-                <List data={data} idx={idx}/> \n+                <List data={data} idx={idx} /> \n                 </div>\n \n               )\n             })\n"
+                },
+                {
+                    "date": 1659684966452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 <div>\n                  {/* <p>{a}</p> */}\n                 {/* <List data={data} idx={idx}/>                */}\n                 <p>{i}</p>\n-                <List data={data} idx={idx} /> \n+                <List data={data} idx={()=>{setIdx(i)}} /> \n                 </div>\n \n               )\n             })\n"
+                },
+                {
+                    "date": 1659685102838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 <div>\n                  {/* <p>{a}</p> */}\n                 {/* <List data={data} idx={idx}/>                */}\n                 <p>{i}</p>\n-                <List data={data} idx={()=>{setIdx(i)}} /> \n+                <List data={data} setIdx={()=>{setIdx(i)}} /> \n                 </div>\n \n               )\n             })\n"
+                },
+                {
+                    "date": 1659685110862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 <div>\n                  {/* <p>{a}</p> */}\n                 {/* <List data={data} idx={idx}/>                */}\n                 <p>{i}</p>\n-                <List data={data} setIdx={()=>{setIdx(i)}} /> \n+                <List data={data} idx={idx} setIdx={()=>{setIdx(i)}} /> \n                 </div>\n \n               )\n             })\n"
+                },
+                {
+                    "date": 1659685130344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,8 @@\n                 //console.log(i);\n                 <div>\n                  {/* <p>{a}</p> */}\n                 {/* <List data={data} idx={idx}/>                */}\n-                <p>{i}</p>\n                 <List data={data} idx={idx} setIdx={()=>{setIdx(i)}} /> \n                 </div>\n \n               )\n"
+                },
+                {
+                    "date": 1659685142065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,13 +27,13 @@\n                 // function listIdx(){\n                 //   setIdx(i)\n                 // }\n                 //console.log(i);\n-                <div>\n+                <>\n                  {/* <p>{a}</p> */}\n                 {/* <List data={data} idx={idx}/>                */}\n                 <List data={data} idx={idx} setIdx={()=>{setIdx(i)}} /> \n-                </div>\n+                </>\n \n               )\n             })\n           }\n"
+                },
+                {
+                    "date": 1659685164912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import {Navbar, Nav, Container, Row, Col} from 'react-bootstrap';\n import data from './data';\n \n function App() {\n-  let [idx, setIdx] = useState(0);\n+  //let [idx, setIdx] = useState(0);\n   return (\n     <div className=\"App\">\n       <Navbar bg=\"dark\" variant=\"dark\">\n         <Container>\n@@ -22,8 +22,9 @@\n       <Container>\n         <Row>\n           {\n             data.map(function(a,i){\n+            let [idx, setIdx] = useState(0);\n               return(\n                 // function listIdx(){\n                 //   setIdx(i)\n                 // }\n"
+                },
+                {
+                    "date": 1659685184296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import {Navbar, Nav, Container, Row, Col} from 'react-bootstrap';\n import data from './data';\n \n function App() {\n-  //let [idx, setIdx] = useState(0);\n+  let [idx, setIdx] = useState(0);\n   return (\n     <div className=\"App\">\n       <Navbar bg=\"dark\" variant=\"dark\">\n         <Container>\n@@ -22,9 +22,8 @@\n       <Container>\n         <Row>\n           {\n             data.map(function(a,i){\n-            let [idx, setIdx] = useState(0);\n               return(\n                 // function listIdx(){\n                 //   setIdx(i)\n                 // }\n"
+                },
+                {
+                    "date": 1659685194572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n                 //console.log(i);\n                 <>\n                  {/* <p>{a}</p> */}\n                 {/* <List data={data} idx={idx}/>                */}\n-                <List data={data} idx={idx} setIdx={()=>{setIdx(i)}} /> \n+                  <List data={data} idx={idx} setIdx={()=>{setIdx(i)}} /> \n                 </>\n \n               )\n             })\n"
+                },
+                {
+                    "date": 1659685219195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,12 @@\n                 //console.log(i);\n                 <>\n                  {/* <p>{a}</p> */}\n                 {/* <List data={data} idx={idx}/>                */}\n-                  <List data={data} idx={idx} setIdx={()=>{setIdx(i)}} /> \n+                  <List data={data} idx={idx} setIdx={()=>{\n+                  setIdx(i)\n+                  console.log(idx);\n+                  }} /> \n                 </>\n \n               )\n             })\n"
+                },
+                {
+                    "date": 1659685237487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n                  {/* <p>{a}</p> */}\n                 {/* <List data={data} idx={idx}/>                */}\n                   <List data={data} idx={idx} setIdx={()=>{\n                   setIdx(i)\n-                  console.log(idx);\n+                  console.log(i);\n                   }} /> \n                 </>\n \n               )\n"
+                },
+                {
+                    "date": 1659685251423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n                 //console.log(i);\n                 <>\n                  {/* <p>{a}</p> */}\n                 {/* <List data={data} idx={idx}/>                */}\n-                  <List data={data} idx={idx} setIdx={()=>{\n+                  <List data={data} key={i} idx={idx} setIdx={()=>{\n                   setIdx(i)\n                   console.log(i);\n                   }} /> \n                 </>\n"
+                },
+                {
+                    "date": 1659685308334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,21 +23,11 @@\n         <Row>\n           {\n             data.map(function(a,i){\n               return(\n-                // function listIdx(){\n-                //   setIdx(i)\n-                // }\n-                //console.log(i);\n-                <>\n-                 {/* <p>{a}</p> */}\n-                {/* <List data={data} idx={idx}/>                */}\n-                  <List data={data} key={i} idx={idx} setIdx={()=>{\n-                  setIdx(i)\n-                  console.log(i);\n-                  }} /> \n-                </>\n \n+                  <List data={data} key={i} idx={idx} setIdx={} />\n+\n               )\n             })\n           }\n         </Row>\n"
+                },
+                {
+                    "date": 1659685408307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n           {\n             data.map(function(a,i){\n               return(\n \n-                  <List data={data} key={i} idx={idx} setIdx={} />\n+                  <List data={data} key={i} idx={()=>{console.log(i)}} />\n \n               )\n             })\n           }\n"
+                },
+                {
+                    "date": 1659685422163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      <h4>{data[props.idx].title}</h4>\n+      {/* <h4>{data[props.idx].title}</h4> */}\n       {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659685440862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      {/* <h4>{data[props.idx].title}</h4> */}\n+      <h4>{data[props.idx].title}</h4>\n       {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659685473030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n           {\n             data.map(function(a,i){\n               return(\n \n-                  <List data={data} key={i} idx={()=>{console.log(i)}} />\n+                  <List data={data} key={i} />\n \n               )\n             })\n           }\n"
+                },
+                {
+                    "date": 1659685478654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      <h4>{data[props.idx].title}</h4>\n+      <h4>{data[props.i].title}</h4>\n       {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659685485478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      <h4>{data[props.i].title}</h4>\n+      <h4>{data[props.key].title}</h4>\n       {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659685514309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n           {\n             data.map(function(a,i){\n               return(\n \n-                  <List data={data} key={i} />\n+                  <List data={data} key={i} idx={idx} />\n \n               )\n             })\n           }\n"
+                },
+                {
+                    "date": 1659685521427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      <h4>{data[props.key].title}</h4>\n+      <h4>{data[props.idx].title}</h4>\n       {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659685667003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,12 @@\n           {\n             data.map(function(a,i){\n               return(\n \n-                  <List data={data} key={i} idx={idx} />\n+                  <List data={data} key={i} idx={()=>{\n+                    let copy = [...idx]\n+                    setIdx(copy)\n+                  }} />\n \n               )\n             })\n           }\n"
+                },
+                {
+                    "date": 1659685698000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,9 @@\n             data.map(function(a,i){\n               return(\n \n                   <List data={data} key={i} idx={()=>{\n-                    let copy = [...idx]\n-                    setIdx(copy)\n+                    setIdx(i)\n                   }} />\n \n               )\n             })\n"
+                },
+                {
+                    "date": 1659685707900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      <h4>{data[props.idx].title}</h4>\n+      <h4>{data[props.setIdx].title}</h4>\n       {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659685782409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,11 +24,9 @@\n           {\n             data.map(function(a,i){\n               return(\n \n-                  <List data={data} key={i} idx={()=>{\n-                    setIdx(i)\n-                  }} />\n+                  <List data={data} key={i} />\n \n               )\n             })\n           }\n"
+                },
+                {
+                    "date": 1659685791383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      <h4>{data[props.setIdx].title}</h4>\n+      <h4>{data[props.idx].title}</h4>\n       {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659685803451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n           {\n             data.map(function(a,i){\n               return(\n \n-                  <List data={data} key={i} />\n+                  <List data={data} idx={idx} key={i} />\n \n               )\n             })\n           }\n"
+                },
+                {
+                    "date": 1659685820422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,9 @@\n       <Container>\n         <Row>\n           {\n             data.map(function(a,i){\n+              console.log(;)\n               return(\n \n                   <List data={data} idx={idx} key={i} />\n \n"
+                },
+                {
+                    "date": 1659685896488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,12 +22,15 @@\n       <Container>\n         <Row>\n           {\n             data.map(function(a,i){\n-              console.log(;)\n+              console.log(i)\n+              function listIdx(){\n+                setIdx(i)\n+              }\n               return(\n \n-                  <List data={data} idx={idx} key={i} />\n+                  <List data={data} idx={idx} listIdx={listIdx} key={i} />\n \n               )\n             })\n           }\n"
+                },
+                {
+                    "date": 1659685913658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      <h4>{data[props.idx].title}</h4>\n+      <h4>{data[props.listIdx].title}</h4>\n       {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659685920281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      <h4>{data[props.listIdx].title}</h4>\n+      <h4>{data[props.idx].title}</h4>\n       {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659686182664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import {Navbar, Nav, Container, Row, Col} from 'react-bootstrap';\n import data from './data';\n \n function App() {\n-  let [idx, setIdx] = useState(0);\n+  let [idx, setIdx] = useState([]);\n   return (\n     <div className=\"App\">\n       <Navbar bg=\"dark\" variant=\"dark\">\n         <Container>\n@@ -22,11 +22,15 @@\n       <Container>\n         <Row>\n           {\n             data.map(function(a,i){\n-              console.log(i)\n+              //console.log(i)\n               function listIdx(){\n-                setIdx(i)\n+                let copy = [...idx]\n+                copy.push(i)\n+                setIdx(copy)\n+  let [idx, setIdx] = useState([]);\n+                console.log()\n               }\n               return(\n \n                   <List data={data} idx={idx} listIdx={listIdx} key={i} />\n"
+                },
+                {
+                    "date": 1659686203847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,10 +27,9 @@\n               function listIdx(){\n                 let copy = [...idx]\n                 copy.push(i)\n                 setIdx(copy)\n-  let [idx, setIdx] = useState([]);\n-                console.log()\n+                console.log(idx)\n               }\n               return(\n \n                   <List data={data} idx={idx} listIdx={listIdx} key={i} />\n@@ -47,9 +46,9 @@\n function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      <h4>{data[props.idx].title}</h4>\n+      {/* <h4>{data[props.idx].title}</h4> */}\n       {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659686244949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,13 +23,14 @@\n         <Row>\n           {\n             data.map(function(a,i){\n               //console.log(i)\n+              setIdx(i)\n               function listIdx(){\n-                let copy = [...idx]\n-                copy.push(i)\n-                setIdx(copy)\n-                console.log(idx)\n+                // let copy = [...idx]\n+                // copy.push(i)\n+                // setIdx(copy)\n+                // console.log(idx)\n               }\n               return(\n \n                   <List data={data} idx={idx} listIdx={listIdx} key={i} />\n"
+                },
+                {
+                    "date": 1659686266403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      {/* <h4>{data[props.idx].title}</h4> */}\n+      <h4>{data[props.idx].title}</h4>\n       {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659686272145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n                 // console.log(idx)\n               }\n               return(\n \n-                  <List data={data} idx={idx} listIdx={listIdx} key={i} />\n+                  <List data={data} idx={idx} key={i} />\n \n               )\n             })\n           }\n"
+                },
+                {
+                    "date": 1659686322988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,12 @@\n         <Row>\n           {\n             data.map(function(a,i){\n               //console.log(i)\n-              setIdx(i)\n+              //setIdx(i)\n+              let copy = [...idx]\n+              copy.push(i)\n+              setIdx(copy)\n               function listIdx(){\n                 // let copy = [...idx]\n                 // copy.push(i)\n                 // setIdx(copy)\n"
+                },
+                {
+                    "date": 1659686401183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,9 @@\n               //setIdx(i)\n               let copy = [...idx]\n               copy.push(i)\n               setIdx(copy)\n+              console.log(idx)\n               function listIdx(){\n                 // let copy = [...idx]\n                 // copy.push(i)\n                 // setIdx(copy)\n"
+                },
+                {
+                    "date": 1659686479270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,11 +24,11 @@\n           {\n             data.map(function(a,i){\n               //console.log(i)\n               //setIdx(i)\n-              let copy = [...idx]\n-              copy.push(i)\n-              setIdx(copy)\n+              // let copy = [...idx]\n+              // copy.push(i)\n+              // setIdx(copy)\n               console.log(idx)\n               function listIdx(){\n                 // let copy = [...idx]\n                 // copy.push(i)\n"
+                },
+                {
+                    "date": 1659686510250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n       <Container>\n         <Row>\n           {\n             data.map(function(a,i){\n-              //console.log(i)\n+              console.log(i)\n               //setIdx(i)\n               // let copy = [...idx]\n               // copy.push(i)\n               // setIdx(copy)\n"
+                },
+                {
+                    "date": 1659686519205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n               //setIdx(i)\n               // let copy = [...idx]\n               // copy.push(i)\n               // setIdx(copy)\n-              console.log(idx)\n+              //console.log(idx)\n               function listIdx(){\n                 // let copy = [...idx]\n                 // copy.push(i)\n                 // setIdx(copy)\n"
+                },
+                {
+                    "date": 1659686673247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n       <Container>\n         <Row>\n           {\n             data.map(function(a,i){\n-              console.log(i)\n+              //console.log(i)\n               //setIdx(i)\n               // let copy = [...idx]\n               // copy.push(i)\n               // setIdx(copy)\n@@ -48,12 +48,13 @@\n   );\n }\n \n function List(props){\n+  console.log();\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      <h4>{data[props.idx].title}</h4>\n+      <h4>{data[0].title}</h4>\n       {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659686697501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n   );\n }\n \n function List(props){\n-  console.log();\n+  console.log(data);\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n       <h4>{data[0].title}</h4>\n"
+                },
+                {
+                    "date": 1659687055671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import {Navbar, Nav, Container, Row, Col} from 'react-bootstrap';\n import data from './data';\n \n function App() {\n-  let [idx, setIdx] = useState([]);\n+  //let [idx, setIdx] = useState([]);\n   return (\n     <div className=\"App\">\n       <Navbar bg=\"dark\" variant=\"dark\">\n         <Container>\n@@ -36,9 +36,9 @@\n                 // console.log(idx)\n               }\n               return(\n \n-                  <List data={data} idx={idx} key={i} />\n+                  <List data={data} key={i} />\n \n               )\n             })\n           }\n@@ -49,8 +49,9 @@\n }\n \n function List(props){\n   console.log(data);\n+  let [idx, setIdx] = useState(0);\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n       <h4>{data[0].title}</h4>\n"
+                },
+                {
+                    "date": 1659687164481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n   let [idx, setIdx] = useState(0);\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      <h4>{data[0].title}</h4>\n+      <h4>{data[idx].title}</h4>\n       {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659687214178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,14 +48,14 @@\n   );\n }\n \n function List(props){\n-  console.log(data);\n-  let [idx, setIdx] = useState(0);\n+  //console.log(data);\n+  //let [idx, setIdx] = useState(0);\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      <h4>{data[idx].title}</h4>\n+      {/* <h4>{data[idx].title}</h4> */}\n       {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659687224785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import {Navbar, Nav, Container, Row, Col} from 'react-bootstrap';\n import data from './data';\n \n function App() {\n-  //let [idx, setIdx] = useState([]);\n+  let [idx, setIdx] = useState([]);\n   return (\n     <div className=\"App\">\n       <Navbar bg=\"dark\" variant=\"dark\">\n         <Container>\n"
+                },
+                {
+                    "date": 1659687232412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n       <Container>\n         <Row>\n           {\n             data.map(function(a,i){\n-              //console.log(i)\n+              console.log(i)\n               //setIdx(i)\n               // let copy = [...idx]\n               // copy.push(i)\n               // setIdx(copy)\n"
+                },
+                {
+                    "date": 1659687300600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,10 @@\n         <Row>\n           {\n             data.map(function(a,i){\n               console.log(i)\n+              let copy = [...idx]\n+              copy.push(i)\n               //setIdx(i)\n               // let copy = [...idx]\n               // copy.push(i)\n               // setIdx(copy)\n"
+                },
+                {
+                    "date": 1659687433729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n             data.map(function(a,i){\n               console.log(i)\n               let copy = [...idx]\n               copy.push(i)\n+              setIdx(copy)\n               //setIdx(i)\n               // let copy = [...idx]\n               // copy.push(i)\n               // setIdx(copy)\n"
+                },
+                {
+                    "date": 1659687513170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,14 @@\n           {\n             data.map(function(a,i){\n               console.log(i)\n               let copy = [...idx]\n-              copy.push(i)\n-              setIdx(copy)\n+              console.log(copy)\n+\n+\n+\n+              //copy.push(i)\n+              //setIdx(copy)\n               //setIdx(i)\n               // let copy = [...idx]\n               // copy.push(i)\n               // setIdx(copy)\n"
+                },
+                {
+                    "date": 1659687535901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n           {\n             data.map(function(a,i){\n               console.log(i)\n               let copy = [...idx]\n+              copy.push(i)\n               console.log(copy)\n \n \n \n"
+                },
+                {
+                    "date": 1659687632925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n   );\n }\n \n function List(props){\n-  //console.log(data);\n+  console.log(props.key);\n   //let [idx, setIdx] = useState(0);\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n"
+                },
+                {
+                    "date": 1659687640355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n   );\n }\n \n function List(props){\n-  console.log(props.key);\n+  console.log(props.i);\n   //let [idx, setIdx] = useState(0);\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n"
+                },
+                {
+                    "date": 1659687661053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n   );\n }\n \n function List(props){\n-  console.log(props.i);\n+  console.log(props.key[i]);\n   //let [idx, setIdx] = useState(0);\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n"
+                },
+                {
+                    "date": 1659687670784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n   );\n }\n \n function List(props){\n-  console.log(props.key[i]);\n+  //console.log();\n   //let [idx, setIdx] = useState(0);\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n"
+                },
+                {
+                    "date": 1659687701267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import {Navbar, Nav, Container, Row, Col} from 'react-bootstrap';\n import data from './data';\n \n function App() {\n-  let [idx, setIdx] = useState([]);\n+  let [idx, setIdx] = useState(0);\n   return (\n     <div className=\"App\">\n       <Navbar bg=\"dark\" variant=\"dark\">\n         <Container>\n"
+                },
+                {
+                    "date": 1659687710238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,21 +23,8 @@\n         <Row>\n           {\n             data.map(function(a,i){\n               console.log(i)\n-              let copy = [...idx]\n-              copy.push(i)\n-              console.log(copy)\n-\n-\n-\n-              //copy.push(i)\n-              //setIdx(copy)\n-              //setIdx(i)\n-              // let copy = [...idx]\n-              // copy.push(i)\n-              // setIdx(copy)\n-              //console.log(idx)\n               function listIdx(){\n                 // let copy = [...idx]\n                 // copy.push(i)\n                 // setIdx(copy)\n"
+                },
+                {
+                    "date": 1659687738400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,10 @@\n         <Row>\n           {\n             data.map(function(a,i){\n               console.log(i)\n+              setIdx(i)\n+              console.log(idx)\n               function listIdx(){\n                 // let copy = [...idx]\n                 // copy.push(i)\n                 // setIdx(copy)\n"
+                },
+                {
+                    "date": 1659687834332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,10 @@\n         <Row>\n           {\n             data.map(function(a,i){\n               console.log(i)\n-              setIdx(i)\n-              console.log(idx)\n+              //setIdx(i)\n+              //console.log(idx)\n               function listIdx(){\n                 // let copy = [...idx]\n                 // copy.push(i)\n                 // setIdx(copy)\n"
+                },
+                {
+                    "date": 1659687999728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n           {\n             data.map(function(a,i){\n               console.log(i)\n               //setIdx(i)\n-              //console.log(idx)\n+              console.log(idx)\n               function listIdx(){\n                 // let copy = [...idx]\n                 // copy.push(i)\n                 // setIdx(copy)\n"
+                },
+                {
+                    "date": 1659688037536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n       <Container>\n         <Row>\n           {\n             data.map(function(a,i){\n-              console.log(i)\n+              //console.log(i)\n               //setIdx(i)\n               console.log(idx)\n               function listIdx(){\n                 // let copy = [...idx]\n"
+                },
+                {
+                    "date": 1659688118165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,12 @@\n         <Row>\n           {\n             data.map(function(a,i){\n               //console.log(i)\n-              //setIdx(i)\n+              setIdx(i)\n+\n               console.log(idx)\n+\n               function listIdx(){\n                 // let copy = [...idx]\n                 // copy.push(i)\n                 // setIdx(copy)\n"
+                },
+                {
+                    "date": 1659688170860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         <Row>\n           {\n             data.map(function(a,i){\n               //console.log(i)\n-              setIdx(i)\n+              //setIdx(i)\n \n               console.log(idx)\n \n               function listIdx(){\n"
+                },
+                {
+                    "date": 1659688193813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n                 // console.log(idx)\n               }\n               return(\n \n-                  <List data={data} key={i} />\n+                  <List data={data} key={i} i={i} />\n \n               )\n             })\n           }\n"
+                },
+                {
+                    "date": 1659688202198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n   );\n }\n \n function List(props){\n-  //console.log();\n+  console.log(i);\n   //let [idx, setIdx] = useState(0);\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n"
+                },
+                {
+                    "date": 1659688211432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n   );\n }\n \n function List(props){\n-  console.log(i);\n+  console.log(props.i);\n   //let [idx, setIdx] = useState(0);\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n"
+                },
+                {
+                    "date": 1659688219244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             data.map(function(a,i){\n               //console.log(i)\n               //setIdx(i)\n \n-              console.log(idx)\n+              //console.log(idx)\n \n               function listIdx(){\n                 // let copy = [...idx]\n                 // copy.push(i)\n"
+                },
+                {
+                    "date": 1659688244510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,14 +47,14 @@\n   );\n }\n \n function List(props){\n-  console.log(props.i);\n+  //console.log(props.i);\n   //let [idx, setIdx] = useState(0);\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      {/* <h4>{data[idx].title}</h4> */}\n+      <h4>{data[props.i].title}</h4>\n       {/* <p>{data[props.idx].price}</p> */}\n     </Col>\n   );\n }\n"
+                },
+                {
+                    "date": 1659688255991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n       <h4>{data[props.i].title}</h4>\n-      {/* <p>{data[props.idx].price}</p> */}\n+      <p>{data[props.i].price}</p>\n     </Col>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1659688280131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n import {Navbar, Nav, Container, Row, Col} from 'react-bootstrap';\n import data from './data';\n \n function App() {\n-  let [idx, setIdx] = useState(0);\n   return (\n     <div className=\"App\">\n       <Navbar bg=\"dark\" variant=\"dark\">\n         <Container>\n@@ -22,23 +21,10 @@\n       <Container>\n         <Row>\n           {\n             data.map(function(a,i){\n-              //console.log(i)\n-              //setIdx(i)\n-\n-              //console.log(idx)\n-\n-              function listIdx(){\n-                // let copy = [...idx]\n-                // copy.push(i)\n-                // setIdx(copy)\n-                // console.log(idx)\n-              }\n               return(\n-\n                   <List data={data} key={i} i={i} />\n-\n               )\n             })\n           }\n         </Row>\n@@ -47,10 +33,8 @@\n   );\n }\n \n function List(props){\n-  //console.log(props.i);\n-  //let [idx, setIdx] = useState(0);\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n       <h4>{data[props.i].title}</h4>\n"
+                },
+                {
+                    "date": 1659688373970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n         <Row>\n           {\n             data.map(function(a,i){\n               return(\n-                  <List data={data} key={i} i={i} />\n+                  <List data={data} i={i} key={i} />\n               )\n             })\n           }\n         </Row>\n"
+                },
+                {
+                    "date": 1659688655055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n //import logo from './logo.svg';\n import './App.css';\n-import { useState } from 'react';\n import {Navbar, Nav, Container, Row, Col} from 'react-bootstrap';\n import data from './data';\n \n function App() {\n"
+                },
+                {
+                    "date": 1659689259350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         <Row>\n           {\n             data.map(function(a,i){\n               return(\n-                  <List data={data} i={i} key={i} />\n+                <List data={data[i]} key={i} />\n               )\n             })\n           }\n         </Row>\n@@ -35,10 +35,10 @@\n function List(props){\n   return (\n     <Col>\n       <img src=\"https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"\" />\n-      <h4>{data[props.i].title}</h4>\n-      <p>{data[props.i].price}</p>\n+      <h4>{props.data.title}</h4>\n+      <p>{props.data.price}</p>\n     </Col>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1659689395869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         <Row>\n           {\n             data.map(function(a,i){\n               return(\n-                <List data={data[i]} key={i} />\n+                <List data={data[i]} i={i} key={i} />\n               )\n             })\n           }\n         </Row>\n"
+                },
+                {
+                    "date": 1659689512288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       <div className=\"main-bg\"></div>    \n       <Container>\n         <Row>\n           {\n-            data.map(function(a,i){\n+            data.map((a,i)=>{\n               return(\n                 <List data={data[i]} i={i} key={i} />\n               )\n             })\n"
+                }
+            ],
+            "date": 1659677810962,
+            "name": "Commit-0",
+            "content": "import logo from './logo.svg';\nimport './App.css';\n\nfunction App() {\n  return (\n    <div className=\"App\">\n      <header className=\"App-header\">\n        <img src={logo} className=\"App-logo\" alt=\"logo\" />\n        <p>\n          Edit <code>src/App.js</code> and save to reload.\n        </p>\n        <a\n          className=\"App-link\"\n          href=\"https://reactjs.org\"\n          target=\"_blank\"\n          rel=\"noopener noreferrer\"\n        >\n          Learn React\n        </a>\n      </header>\n    </div>\n  );\n}\n\nexport default App;\n"
+        }
+    ]
+}

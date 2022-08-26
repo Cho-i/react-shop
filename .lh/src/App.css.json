@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/App.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1659680395972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1659680427823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,6 +38,6 @@\n }\n \n .main-bg{\n   height:400px;\n-  background: url('https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center / cover;\n+  background: url('https://images.pexels.com/photos/11858609/pexels-photo-11858609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center / cover;\n }\n"
+                },
+                {
+                    "date": 1659680542125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,6 +38,6 @@\n }\n \n .main-bg{\n   height:400px;\n-  background: url('https://images.pexels.com/photos/11858609/pexels-photo-11858609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center / cover;\n+  background: url('https://images.pexels.com/photos/9320207/pexels-photo-9320207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center / cover;\n }\n"
+                },
+                {
+                    "date": 1659680691658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,4 +40,8 @@\n .main-bg{\n   height:400px;\n   background: url('https://images.pexels.com/photos/9320207/pexels-photo-9320207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center / cover;\n }\n+\n+img{\n+  width:100%;\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1659681137533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,9 @@\n }\n \n .main-bg{\n   height:400px;\n+  margin-bottom:20px;\n   background: url('https://images.pexels.com/photos/9320207/pexels-photo-9320207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center / cover;\n }\n \n img{\n"
+                },
+                {
+                    "date": 1659682473917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,5 +44,10 @@\n }\n \n img{\n   width:100%;\n+}\n+\n+h4{\n+  margin:10px 0;\n+  font-size:20px;\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1659680395972,
+            "name": "Commit-0",
+            "content": ".App {\n  text-align: center;\n}\n\n.App-logo {\n  height: 40vmin;\n  pointer-events: none;\n}\n\n@media (prefers-reduced-motion: no-preference) {\n  .App-logo {\n    animation: App-logo-spin infinite 20s linear;\n  }\n}\n\n.App-header {\n  background-color: #282c34;\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  font-size: calc(10px + 2vmin);\n  color: white;\n}\n\n.App-link {\n  color: #61dafb;\n}\n\n@keyframes App-logo-spin {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n\n.main-bg{\n  height:400px;\n  background: url('https://images.pexels.com/photos/12913573/pexels-photo-12913573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center / cover;\n}\n"
+        }
+    ]
+}
