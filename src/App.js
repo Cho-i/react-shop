@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="/">Shop</Navbar.Brand>
+          <Navbar.Brand href="/">Home</Navbar.Brand>
           <Nav className="me-auto">
             <Link to="/detail" className="nav-link">detail</Link>
             <Link to="/event" className="nav-link">event</Link>
@@ -62,7 +62,7 @@ function App() {
                     setLoading(false)
                   }
   
-                  (count <= 3) ? loadData() : endData()
+                  (count < 3) ? loadData() : endData()
                   
                 }}>더보기</Button>
                 : null

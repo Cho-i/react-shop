@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import {Container, Row} from 'react-bootstrap';
+import {Container, Row, Nav} from 'react-bootstrap';
 import {useState, useEffect} from 'react';
 
 function Detail(props) {
@@ -7,6 +7,7 @@ function Detail(props) {
   let shoesId = props.shoes.find((x)=> x.id == id);
   let [banner, setBanner] = useState(true);
   let [num, setNum] = useState('');
+  let [tab, setTab] = useState(0);
 
   useEffect(()=>{
     let a = setTimeout(()=>{
@@ -41,6 +42,22 @@ function Detail(props) {
             <button className="btn btn-danger">주문하기</button>
           </div>
         </Row>
+        <Row className="mt-4">
+          <Nav fill variant="tabs" defaultActiveKey="link0">
+            <Nav.Item>
+              <Nav.Link eventKey="link0" onClick={()=>{ setTab(0) }}>탭0</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="link1" onClick={()=>{ setTab(1) }}>탭1</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="link2" onClick={()=>{ setTab(2) }}>탭2</Nav.Link>
+            </Nav.Item>
+          </Nav>
+        </Row>
+        <Row>
+          <TabContent tab={tab}/>
+        </Row>
       </Container>
     </>
   );
@@ -54,6 +71,10 @@ function Banner(){
       </div>
     </>
   );
+}
+
+function TabContent({tab}){
+  return [<div>탭0</div>, <div>탭1</div>, <div>탭2</div>][tab]
 }
 
 export default Detail;
