@@ -2,19 +2,26 @@ import { useParams } from 'react-router-dom'
 import {Container, Row, Nav} from 'react-bootstrap';
 import {useState, useEffect} from 'react';
 
-function Detail(props) {
+function Detail({shoes}) {
   let { id } = useParams();
-  let shoesId = props.shoes.find((x)=> x.id == id);
+  let shoesId = shoes.find((x)=> x.id == id);
   let [banner, setBanner] = useState(true);
   let [num, setNum] = useState('');
   let [tab, setTab] = useState(0);
+  let [fade, setFade] = useState('')
+
 
   useEffect(()=>{
     let a = setTimeout(()=>{
       setBanner(false)
     },2000);
+    let fade = setTimeout(()=>{ 
+      setFade('end') 
+    }, 100)
     return ()=>{
       clearTimeout(a);
+      clearTimeout(fade);
+      setFade('')
     }
     // if(isNaN(num) == true){
     //   alert('숫자만 입력해 주세요')
@@ -27,7 +34,7 @@ function Detail(props) {
       {
         (banner == true) ? <Banner /> : null
       }
-      <Container>
+      <Container className={'start ' + fade} >
         <Row>
           <div className="col-md-6">
             <img src={'https://codingapple1.github.io/shop/shoes' + (shoesId.id+1) +'.jpg'} alt="" />
@@ -56,7 +63,7 @@ function Detail(props) {
           </Nav>
         </Row>
         <Row>
-          <TabContent tab={tab}/>
+          <TabContent tab={tab} shoes={shoes}/>
         </Row>
       </Container>
     </>
@@ -73,8 +80,8 @@ function Banner(){
   );
 }
 
-function TabContent({tab}){
-  return [<div>탭0</div>, <div>탭1</div>, <div>탭2</div>][tab]
+function TabContent({tab, shoes}){
+  return [<div>{shoes[0].title}</div>, <div>탭1</div>, <div>탭2</div>][tab]
 }
 
 export default Detail;
