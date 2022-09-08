@@ -51,7 +51,7 @@ function Detail({ shoes }) {
 						<p>{shoesId.price}원</p>
 						<button className="btn btn-danger" onClick={() => {
 							dispatch(addItem({ id: 2, name: shoesId.title, count: 1 }))
-						}}>주문하기</button>
+						}}>주문하기🤍</button>
 					</div>
 				</Row>
 				<Row className="mt-4">
