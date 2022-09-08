@@ -18,9 +18,10 @@ function App() {
 		<div className="App">
 			<Navbar bg="dark" variant="dark">
 				<Container>
-					<Navbar.Brand href="/">Home</Navbar.Brand>
+					<Link to="/" className="navbar-brand">Home</Link>
 					<Nav className="me-auto">
-						<Link to="/detail" className="nav-link">detail</Link>
+						{/* <Link to="/detail" className="nav-link">detail</Link> */}
+						<Link to="/cart" className="nav-link">cart</Link>
 						<Link to="/event" className="nav-link">event</Link>
 					</Nav>
 				</Container>
