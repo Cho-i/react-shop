@@ -50,7 +50,7 @@ function Detail({ shoes }) {
 						<p>{shoesId.content}</p>
 						<p>{shoesId.price}원</p>
 						<button className="btn btn-danger" onClick={() => {
-							dispatch(addItem({ id: 2, name: shoesId.title, count: 1 }))
+							dispatch(addItem({ id: shoesId.id, name: shoesId.title, count: 1 }))
 						}}>주문하기🤍</button>
 					</div>
 				</Row>
