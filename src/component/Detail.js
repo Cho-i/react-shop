@@ -12,12 +12,13 @@ function Detail({ shoes }) {
 	let [tab, setTab] = useState(0);
 	let [fade, setFade] = useState('')
 	let dispatch = useDispatch();
+	//console.log(shoesId)
 
 
 	useEffect(() => {
 		let a = setTimeout(() => {
 			setBanner(false)
-		}, 2000);
+		}, 1000);
 		let fade = setTimeout(() => {
 			setFade('end')
 		}, 100)
@@ -79,7 +80,7 @@ function Banner() {
 	return (
 		<>
 			<div className="banner">
-				2초안에 누르면 90%할인!
+				1초안에 누르면 90%할인!
 			</div>
 		</>
 	);
