@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useDispatch } from "react-redux";
 import { addItem } from "./../store/cartSlice.js";
 
-function Detail({ shoes }) {
+function Detail({ shoes, storage, setStorage }) {
 	let { id } = useParams();
 	let shoesId = shoes.find((x) => x.id == id);
 	let [banner, setBanner] = useState(true);
@@ -12,8 +12,16 @@ function Detail({ shoes }) {
 	let [tab, setTab] = useState(0);
 	let [fade, setFade] = useState('')
 	let dispatch = useDispatch();
-	//console.log(shoesId)
 
+	useEffect(() => {
+		let watched = localStorage.getItem('watched')
+		watched = JSON.parse(watched)
+		watched.push(shoesId.id)
+
+		watched = new Set(watched)
+		watched = Array.from(watched)
+		localStorage.setItem('watched', JSON.stringify(watched))
+	}, []);
 
 	useEffect(() => {
 		let a = setTimeout(() => {

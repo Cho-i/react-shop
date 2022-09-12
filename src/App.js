@@ -1,7 +1,7 @@
 import './App.scss';
 import { Navbar, Nav, Container, Row, Button } from 'react-bootstrap';
 import data from './data';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom';
 import Detail from './component/Detail';
 import axios from 'axios';
@@ -14,6 +14,11 @@ function App() {
 	let [loading, setLoading] = useState(false);
 	let [more, setMore] = useState(true);
 	let navigate = useNavigate();
+
+	useEffect(() => {
+		localStorage.setItem('watched', JSON.stringify([]))
+	}, [])
+
 	return (
 		<div className="App">
 			<Navbar bg="dark" variant="dark">
@@ -86,6 +91,7 @@ function App() {
 				</Route>
 				<Route path="/cart" element={<Cart />} />
 			</Routes>
+			{/* <Watched /> */}
 
 			{
 				(loading == true) ? <Loading /> : null
@@ -127,6 +133,19 @@ function Loading() {
 	return (
 		<div className="loading">
 			로딩중
+		</div>
+	)
+}
+
+function Watched() {
+	return (
+		<div className="watched-box">
+			<h3>최근본상품</h3>
+			<ul>
+				<li>0</li>
+				<li>1</li>
+				<li>2</li>
+			</ul>
 		</div>
 	)
 }
