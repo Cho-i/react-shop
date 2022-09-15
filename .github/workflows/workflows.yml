@@ -1,23 +1,23 @@
 name: Github Pages Deploy
 on:
-  push:
-    branches:
-      - "main"
+    push:
+        branches:
+            - "main"
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Install and build
-        run: |
-          npm ci
-          npm run build
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: build # The folder the action should deploy.
+    build:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [14.x]
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v1
+            - name: Install and build
+              run: npm install && npm run build
+              env:
+                  CI: "" # 경고를 에러로 보지 않게 함
+            - name: Deploy
+              uses: JamesIves/github-pages-deploy-action@4.1.1
+              with:
+                  branch: gh-pages # The branch the action should deploy to.
+                  folder: build # The folder the action should deploy.
